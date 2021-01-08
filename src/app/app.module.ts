@@ -1,4 +1,3 @@
-import { UsuarioModule } from './usuario/usuario.module';
 import { LayoutModule } from './layout/layout.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -7,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http'
+import { UsuariosService } from './services/usuarios.service';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,10 @@ import { CommonModule } from '@angular/common';
     FormsModule, 
     LayoutModule,    
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UsuariosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
