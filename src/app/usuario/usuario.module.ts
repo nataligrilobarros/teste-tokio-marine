@@ -7,6 +7,7 @@ import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.componen
 import { DetalhesUsuarioComponent } from './detalhes-usuario/detalhes-usuario.component';
 import { CadastrarUsuarioComponent } from './cadastrar-usuario/cadastrar-usuario.component';
 import { RouterModule } from '@angular/router';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [ListaUsuariosComponent, DetalhesUsuarioComponent, CadastrarUsuarioComponent],
@@ -14,7 +15,10 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     FormsModule,
     UsuarioRoutingModule,
-    RouterModule
+    RouterModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyA8l21InV3-7kfZkJEAgdXIFEwGZRPpnRI'
+    })
   ]
 })
 export class UsuarioModule { }

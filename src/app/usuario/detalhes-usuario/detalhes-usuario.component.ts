@@ -11,6 +11,9 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
 export class DetalhesUsuarioComponent implements OnInit {
 
   usuario: UsuarioModel;
+  lat: number;
+  lng: number;
+
 
   constructor(private routerActive: ActivatedRoute, private usuarioServico:UsuariosService ) { }
 
@@ -21,6 +24,8 @@ export class DetalhesUsuarioComponent implements OnInit {
 
           this.usuarioServico.buscarDetalhesUsuario(+parametros['id']).subscribe(retorno => {
               this.usuario = retorno;
+              this.lat = +this.usuario.address.geo.lat;
+              this.lng = +this.usuario.address.geo.lng;
           });
       }
     });

@@ -1,4 +1,4 @@
 export class GeolocalizacaoModel{
-        lat: string;
-        lng: string;
+        lat: number;
+        lng: number;
 }

@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http'
 import { UsuariosService } from './services/usuarios.service';
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -20,7 +21,8 @@ import { UsuariosService } from './services/usuarios.service';
     LayoutModule,    
     AppRoutingModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [UsuariosService],
   bootstrap: [AppComponent]
